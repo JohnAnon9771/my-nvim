@@ -22,14 +22,10 @@ mason_lspconfig.setup({
 
 mason_lspconfig.setup_handlers({
   function(server_name)
-    require("lspconfig")[server_name].setup({
-      capabilities = capabilities,
+    require("lspconfig")[server_name].setup(coq.lsp_ensure_capabilities({
       on_attach = function(client, buffer)
         ruby_lsp_config.on_attach(client, buffer)
       end,
-      settings = servers[server_name],
-      filetypes = (servers[server_name] or {}).filetypes,
-    })
-    require("lspconfig")[server_name].setup(coq.lsp_ensure_capabilities())
+    }))
   end,
 })
