@@ -48,3 +48,6 @@ vim.keymap.set("n", "gf", conform.format, { desc = "Format Document" })
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
 
+-- Utils
+vim.keymap.set("n", "<C-p>", ":let @+ = expand('%')<CR>", { desc = "Copy relative path of file opened" })
+
