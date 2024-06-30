@@ -50,4 +50,3 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live
 
 -- Utils
 vim.keymap.set("n", "<C-p>", ":let @+ = expand('%')<CR>", { desc = "Copy relative path of file opened" })
-

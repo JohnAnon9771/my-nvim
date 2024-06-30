@@ -1,9 +1,9 @@
 require("mason").setup()
 
 local mason_lspconfig = require("mason-lspconfig")
-local ruby_lsp_config = require("util.ruby-lsp")
 
 local servers = {
+  stylelua = {},
   lua_ls = {},
   ruby_lsp = {},
 }

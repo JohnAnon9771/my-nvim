@@ -19,5 +19,6 @@ return {
         ruby_lspconfig.on_attach(client, buffer)
       end,
     })
+   lsp.lua_ls.setup({})
   end,
 }
