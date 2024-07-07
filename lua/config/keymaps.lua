@@ -26,9 +26,8 @@ vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
 -- Remove highlight
 vim.keymap.set("n", "<esc>", ":noh<CR>", { silent = true })
 
--- Lexplore
-vim.keymap.set("n", "<leader>e", "<cmd>Lexplore<cr>", { silent = true })
---vim.keymap.set("n", "<leader>ta", "<cmd>
+-- Neotree
+vim.keymap.set("n", "<leader>e", "<cmd>:Neotree toggle position=right<cr>", { silent = true })
 
 -- Movements
 vim.keymap.set("n", "<leader>l", "$", { silent = true })
