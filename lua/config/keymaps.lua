@@ -10,13 +10,11 @@ harpoon:setup()
 -- REQUIRED
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<leader>qm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
-
--- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<Tab>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<S-Tab>", function() harpoon:list():next() end)
 
@@ -31,6 +29,8 @@ vim.keymap.set("n", "<leader>e", "<cmd>:Neotree toggle position=right<cr>", { si
 
 -- Movements
 vim.keymap.set("n", "<leader>l", "$", { silent = true })
+vim.keymap.set("n", "<leader>h", "_", { silent = true })
+
 -- Move lines up and down
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })

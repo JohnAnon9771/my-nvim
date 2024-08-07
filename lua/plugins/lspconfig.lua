@@ -19,6 +19,7 @@ return {
         ruby_lspconfig.on_attach(client, buffer)
       end,
     })
-   lsp.lua_ls.setup({})
+    lsp.lua_ls.setup({})
+    lsp.tailwindcss.setup({})
   end,
 }
