@@ -4,22 +4,45 @@ return {
   dependencies = {
     { "ms-jpq/coq_nvim", branch = "coq" },
     { "ms-jpq/coq.artifacts", branch = "artifacts" },
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   },
   init = function()
     vim.g.coq_settings = {
       auto_start = true,
+      -- keymap = { recommended = false },
     }
   end,
   config = function()
-    local lsp = require("lspconfig")
-    local ruby_lspconfig = require("util.ruby-lsp")
+    local coq = require("coq")
+    local function make_opts(opts)
+      return coq.lsp_ensure_capabilities(opts or {})
+    end
 
-    lsp.ruby_lsp.setup({
-      on_attach = function(client, buffer)
-        ruby_lspconfig.on_attach(client, buffer)
-      end,
-    })
-    lsp.lua_ls.setup({})
-    lsp.tailwindcss.setup({})
+    local function get_ruby_opts()
+      local status_ok, ruby_util = pcall(require, "util.ruby-lsp")
+      if not status_ok then return {} end
+      return {
+        on_attach = function(client, buffer)
+          ruby_util.on_attach(client, buffer)
+        end
+      }
+    end
+
+    vim.lsp.config("ruby_lsp", make_opts(get_ruby_opts()))
+    vim.lsp.enable("ruby_lsp")
+
+    vim.lsp.config("lua_ls", make_opts({
+      settings = {
+        Lua = {
+          diagnostics = { globals = { "vim" } },
+          workspace = { checkThirdParty = false },
+        },
+      },
+    }))
+    vim.lsp.enable("lua_ls")
+
+    vim.lsp.config("tailwindcss", make_opts({}))
+    vim.lsp.enable("tailwindcss")
   end,
 }
