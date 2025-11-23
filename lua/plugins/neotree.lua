@@ -7,6 +7,9 @@ return {
     "MunifTanjim/nui.nvim",
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
+  keys = {
+    { "<leader>e", "<cmd>Neotree toggle position=right<cr>", desc = "Explorer NeoTree" },
+  },
   opts = {
     filesystem = {
       filtered_items = {
