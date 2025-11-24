@@ -21,7 +21,10 @@ return {
   ---@type TSConfig
   ---@diagnostic disable-next-line: missing-fields
   opts = {
-    highlight = { enable = true },
+    highlight = {
+        enable = true
+        disable = { "text" }
+    },
     indent = { enable = true },
     ensure_installed = {
       "bash",
@@ -29,11 +32,8 @@ return {
       "diff",
       "html",
       "javascript",
-      "jsdoc",
       "json",
-      "jsonc",
       "lua",
-      "luadoc",
       "luap",
       "markdown",
       "markdown_inline",
@@ -42,10 +42,10 @@ return {
       "toml",
       "typescript",
       "vim",
-      "vimdoc",
       "xml",
       "yaml",
-      "ruby"
+      "ruby",
+      "embedded_template",
     },
     incremental_selection = {
       enable = true,
