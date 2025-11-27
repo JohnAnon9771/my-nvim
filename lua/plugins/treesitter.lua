@@ -22,7 +22,7 @@ return {
   ---@diagnostic disable-next-line: missing-fields
   opts = {
     highlight = {
-        enable = true
+        enable = true,
         disable = { "text" }
     },
     indent = { enable = true },
