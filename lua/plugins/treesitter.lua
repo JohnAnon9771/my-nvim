@@ -45,6 +45,7 @@ return {
       "xml",
       "yaml",
       "ruby",
+      "rust",
       "embedded_template",
     },
     incremental_selection = {
