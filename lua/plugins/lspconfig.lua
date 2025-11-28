@@ -4,8 +4,8 @@ return {
   dependencies = {
     { "ms-jpq/coq_nvim", branch = "coq" },
     { "ms-jpq/coq.artifacts", branch = "artifacts" },
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason.nvim",
+    "mason-org/mason-lspconfig.nvim",
   },
   init = function()
     vim.g.coq_settings = {
@@ -14,6 +14,11 @@ return {
     }
   end,
   config = function()
+    require("mason").setup()
+    require("mason-lspconfig").setup({
+      ensure_installed = { "ruby_lsp", "lua_ls", "tailwindcss" },
+    })
+
     local coq = require("coq")
     local function make_opts(opts)
       return coq.lsp_ensure_capabilities(opts or {})
