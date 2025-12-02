@@ -28,6 +28,13 @@ return {
       local status_ok, ruby_util = pcall(require, "util.ruby-lsp")
       if not status_ok then return {} end
       return {
+        cmd = { "ruby-lsp" },
+        filetypes = { "ruby" },
+        root_markers = { "Gemfile", ".git" },
+        init_options = {
+          formatter = "rubocop",
+          linters = { "rubocop" },
+        },
         on_attach = function(client, buffer)
           ruby_util.on_attach(client, buffer)
         end

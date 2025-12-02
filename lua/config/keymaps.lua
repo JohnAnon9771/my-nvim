@@ -19,6 +19,12 @@ map("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
+-- Window Navigation
+map("n", "<C-h>", "<C-w>h", { desc = "Go to left window", remap = true })
+map("n", "<C-j>", "<C-w>j", { desc = "Go to lower window", remap = true })
+map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window", remap = true })
+map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
+
 -- Utils
 map("n", "<C-p>", ":let @+ = expand('%')<CR>", { desc = "Copy relative path" })
 
