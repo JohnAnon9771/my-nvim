@@ -16,7 +16,7 @@ return {
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "ruby_lsp", "lua_ls", "tailwindcss" },
+      ensure_installed = { "ruby_lsp", "lua_ls", "tailwindcss", "rust-analyzer" },
     })
 
     local coq = require("coq")
