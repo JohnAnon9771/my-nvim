@@ -1,3 +1,8 @@
+class EphemeralStorage
+  class List
+  end
+end
+
 class ProductV2::List
   include ActiveModel::Model
   include ActiveModel::Validations
