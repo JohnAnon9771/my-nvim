@@ -10,7 +10,10 @@ return {
     words = { enabled = true },
     lazygit = { enabled = true },
     picker = { enabled = true },
-    explorer = { enabled = true },
+    explorer = {
+      enabled = true,
+      trash = false,
+    },
     input = { enabled = true },
     scope = { enabled = true },
     indent = { enabled = true },
