@@ -47,7 +47,7 @@ return {
       end,
       desc = "Toggle test summary",
     },
-    -- Toggle test output panel
+    -- Show test output
     {
       "<leader>to",
       function()
