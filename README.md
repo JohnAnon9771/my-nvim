@@ -77,6 +77,20 @@ A tecla líder (<kbd>Leader</kbd>) está configurada como <kbd>Space</kbd>.
 | <kbd>Leader</kbd> + <kbd>fg</kbd>    | Live Grep (procurar texto)                     |
 | <kbd>Leader</kbd> + <kbd>gh...</kbd> | Ações do Gitsigns (Stage, Reset, Preview Hunk) |
 
+### 🧪 Testes (Neotest)
+
+| Tecla                            | Ação                                |
+| :------------------------------- | :---------------------------------- |
+| <kbd>Leader</kbd> + <kbd>tr</kbd> | Executar teste mais próximo (cursor) |
+| <kbd>Leader</kbd> + <kbd>tf</kbd> | Executar todos os testes do arquivo  |
+| <kbd>Leader</kbd> + <kbd>tl</kbd> | Re-executar último teste            |
+| <kbd>Leader</kbd> + <kbd>ts</kbd> | Alternar sumário de testes          |
+| <kbd>Leader</kbd> + <kbd>to</kbd> | Mostrar output do teste             |
+| <kbd>Leader</kbd> + <kbd>tO</kbd> | Alternar painel de output           |
+| <kbd>Leader</kbd> + <kbd>tx</kbd> | Parar execução de testes            |
+| <kbd>Leader</kbd> + <kbd>td</kbd> | Debug do teste mais próximo         |
+| <kbd>Leader</kbd> + <kbd>tw</kbd> | Alternar watch no arquivo atual     |
+
 ## 🧩 Plugins Principais
 
 - **UI/UX**: `nui.nvim`, `notify` (via `snacks.nvim`), `dressing.nvim`.
